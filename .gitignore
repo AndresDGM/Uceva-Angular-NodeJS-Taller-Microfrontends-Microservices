@@ -1,7 +1,8 @@
 # Dependencias instaladas
 **/node_modules/
+**/pnpm-lock.yaml
 
-# Salidas de compilación y herramientas Angular
+# Salidas de compilación y herramientas Angular/Node
 **/dist/
 **/out-tsc/
 **/.angular/
@@ -10,24 +11,27 @@
 **/documentation/
 **/coverage/
 **/.sass-cache/
-
-# Archivos generados por gestores no usados por este repositorio
-**/pnpm-lock.yaml
+*.tsbuildinfo
 
 # Logs y archivos temporales
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-*.tsbuildinfo
 
 # Variables de entorno y secretos locales
 .env
+.env.local
+.env.*.local
 .env.*
 !.env.example
 
+# Herramientas de IA
+.kilo/
+
 # Editores
 .idea/
+.vscode/
 **/.vscode/*
 !**/.vscode/settings.json
 !**/.vscode/tasks.json
@@ -38,3 +42,5 @@ yarn-error.log*
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
+# IMPORTANTE: package-lock.json NO se ignora.

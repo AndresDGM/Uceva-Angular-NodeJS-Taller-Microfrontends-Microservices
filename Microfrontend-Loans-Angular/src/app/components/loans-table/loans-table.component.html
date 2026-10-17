@@ -1,0 +1,31 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Usuario</th>
+			<th scope="col">Libro</th>
+			<th scope="col">Loan Date</th>
+			<th scope="col">Return Date</th>
+			<th scope="col">Estado</th>
+			<th scope="col">Monto</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (loan of loans; track loan) {
+			<tr>
+				<th scope="row">{{ loan.id }}</th>
+				<td>{{ loan.userName }}</td>
+				<td>{{ loan.bookTitle }}</td>
+				<td>{{ loan.loanDate }}</td>
+				<td>{{ loan.returnDate }}</td>
+				<td>
+					<dsb-badge-atom
+						[text]="loan.status"
+						[type]="statusMap[loan.status]" >
+					</dsb-badge-atom>
+				</td>
+				<td>{{ loan.amount | currency }}</td>
+			</tr>
+		}
+	</tbody>
+</table>
