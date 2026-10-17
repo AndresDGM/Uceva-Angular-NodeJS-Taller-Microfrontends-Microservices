@@ -1,0 +1,36 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Formato</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Solicitud</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (report of reports; track report.id) {
+      <tr>
+        <td>{{ report.name }}</td>
+        <td>{{ report.type }}</td>
+        <td>{{ report.format }}</td>
+        <td><span class="badge" [class]="statusClass(report.status)">{{ report.status }}</span></td>
+        <td>{{ report.createdAt | date: 'short' }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-sm btn-success me-1"
+            [disabled]="report.status !== 'COMPLETED'"
+            (click)="download.emit(report)"
+          >Descargar</button>
+          <button type="button" class="btn btn-sm btn-outline-danger" (click)="remove.emit(report)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    } @empty {
+      <tr><td colspan="6" class="text-muted">No hay reportes generados.</td></tr>
+    }
+  </tbody>
+</table>

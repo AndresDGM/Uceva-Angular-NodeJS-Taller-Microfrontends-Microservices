@@ -68,6 +68,31 @@ export const routes: Routes = [
          }).then(m => m.LoansPage),
      },
 
+    {
+        path: 'books',
+        loadComponent: () =>
+            loadRemoteModule({
+                type: 'module',
+                remoteEntry: 'http://localhost:4203/remoteEntry.js',
+                exposedModule: './BooksPage',
+        }).then(m => m.BooksPage),
+    },
+
+  /**
+   * Ruta de reportes.
+   *
+   * Carga el microfrontend de Reports como remote independiente.
+   */
+    {
+        path: 'reports',
+        loadComponent: () =>
+            loadRemoteModule({
+                type: 'module',
+                remoteEntry: 'http://localhost:4204/remoteEntry.js',
+                exposedModule: './ReportsPage',
+        }).then(m => m.ReportsPage),
+    },
+
   /**
    * Ruta comodín.
    *

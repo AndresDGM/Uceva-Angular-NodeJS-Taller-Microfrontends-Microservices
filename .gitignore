@@ -1,31 +1,46 @@
-# Dependencias
-node_modules/
+# Dependencias instaladas
+**/node_modules/
+**/pnpm-lock.yaml
 
-# Entornos y secretos
-.env
-.env.local
-.env.*.local
+# Salidas de compilación y herramientas Angular/Node
+**/dist/
+**/out-tsc/
+**/.angular/
+**/tmp/
+**/bazel-out/
+**/documentation/
+**/coverage/
+**/.sass-cache/
+*.tsbuildinfo
 
-# Compilación y caché (Angular y Node)
-/dist
-/.angular
-/out-tsc
-/coverage
-
-# Logs
+# Logs y archivos temporales
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Sistema y editores
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# Variables de entorno y secretos locales
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+
+# Herramientas de IA
 .kilo/
 
-# IMPORTANTE: package-lock.json NO se ignora.
+# Editores
+.idea/
+.vscode/
+**/.vscode/*
+!**/.vscode/settings.json
+!**/.vscode/tasks.json
+!**/.vscode/launch.json
+!**/.vscode/extensions.json
+.history/
 
-coverage/
-documentation/
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IMPORTANTE: package-lock.json NO se ignora.

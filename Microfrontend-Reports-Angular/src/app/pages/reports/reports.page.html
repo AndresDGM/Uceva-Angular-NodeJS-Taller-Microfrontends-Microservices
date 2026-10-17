@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+      <h1>Reportes</h1>
+      <p class="text-muted mb-0">Solicita reportes y consulta el estado de generación.</p>
+    </div>
+    <button type="button" class="btn btn-outline-primary" (click)="loadReports()">Actualizar historial</button>
+  </div>
+
+  @if (message) {
+    <app-alert [alertState]="messageState" [text]="message" />
+  }
+
+  <form class="card card-body mb-4" [formGroup]="reportForm" (ngSubmit)="submitReport()">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label class="form-label" for="report-name">Nombre</label>
+        <input id="report-name" class="form-control" formControlName="name" placeholder="Resumen de usuarios" />
+      </div>
+      <div class="col-md-3">
+        <label class="form-label" for="report-type">Tipo</label>
+        <select id="report-type" class="form-select" formControlName="type">
+          @for (type of reportTypes; track type) { <option [value]="type">{{ type }}</option> }
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label class="form-label" for="report-format">Formato</label>
+        <select id="report-format" class="form-select" formControlName="format">
+          @for (format of reportFormats; track format) { <option [value]="format">{{ format }}</option> }
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label class="form-label" for="report-count">Registros</label>
+        <input id="report-count" type="number" class="form-control" formControlName="count" min="1" max="100" />
+      </div>
+      <div class="col-md-1 d-flex align-items-end">
+        <button class="btn btn-primary w-100" type="submit">Crear</button>
+      </div>
+    </div>
+  </form>
+
+  @switch (state) {
+    @case ('loading') { <app-alert alertState="loading" text="Cargando reportes..." /> }
+    @case ('error') { <app-alert alertState="error" [text]="message" /> }
+    @case ('success') { <app-reports-table [reports]="reports" (download)="downloadReport($event)" (remove)="deleteReport($event)" /> }
+  }
+</div>
