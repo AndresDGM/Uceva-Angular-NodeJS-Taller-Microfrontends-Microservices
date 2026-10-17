@@ -10,7 +10,7 @@ npm install
 npm run start
 ```
 
-Por defecto escucha en `http://localhost:3003`. Puede configurarse con:
+Por defecto escucha en `http://localhost:3004`. Puede configurarse con:
 
 - `PORT`: puerto HTTP.
 - `PUBLIC_PATH`: carpeta de archivos públicos.

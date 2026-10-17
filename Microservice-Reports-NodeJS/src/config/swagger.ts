@@ -8,7 +8,7 @@ export const swaggerSpec = swaggerJsdoc({
       version: '1.0.0',
       description: 'API para generar, consultar, descargar y eliminar reportes.',
     },
-    servers: [{ url: 'http://localhost:3003' }],
+    servers: [{ url: 'http://localhost:3004' }],
   },
   apis: [
     './src/presentation/modules/**/*.routes.ts',

@@ -71,13 +71,13 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - RemoteEntry: ```http://localhost:4203/remoteEntry.js```
 
 #### Microservice-Reports-NodeJS
-- Corriendo en: ```http://localhost:3003```
-- Swagger API Docs: ```http://localhost:3003/api/docs```
-- API Reports: ```http://localhost:3003/api/reports```
+- Corriendo en: ```http://localhost:3004```
+- Swagger API Docs: ```http://localhost:3004/api/docs```
+- API Reports: ```http://localhost:3004/api/reports```
 
 #### Microfrontend-Reports-Angular
-- Corriendo en: ```http://localhost:4203```
-- RemoteEntry: ```http://localhost:4203/remoteEntry.js```
+- Corriendo en: ```http://localhost:4204```
+- RemoteEntry: ```http://localhost:4204/remoteEntry.js```
 
 #### Client-Host-Angular
 - Corriendo en: ```http://localhost:4200```
