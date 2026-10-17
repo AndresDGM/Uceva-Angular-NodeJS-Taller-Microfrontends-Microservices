@@ -23,9 +23,11 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - Ubícate en la raíz del proyecto de Microfrontend-Users-Angular y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microfrontend-Products-Angular y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microfrontend-Books-Angular y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microfrontend-Reports-Angular y ejecuta el comando: ```npm i --legacy-peer-deps```
 - Ubícate en la raíz del proyecto de Microservice-Users-NodeJS y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microservice-Products-NodeJS y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microservice-Books-NodeJS y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microservice-Reports-NodeJS y ejecuta el comando: ```npm i```
 
 
 ### 2️⃣ Ejecutar los Proyectos
@@ -35,6 +37,7 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - Ubícate en la raíz del proyecto de Microfrontend-Users-Angular y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microfrontend-Products-Angular y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microfrontend-Books-Angular y ejecuta el comando: ```npm run start```
+- Ubícate en la raíz del proyecto de Microfrontend-Reports-Angular y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Client-Host-Angular y ejecuta el comando: ```npm run start```
 
 
@@ -64,6 +67,15 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - API Books: ```http://localhost:3003/api/books/{countBooks}```
 
 #### Microfrontend-Books-Angular
+- Corriendo en: ```http://localhost:4203```
+- RemoteEntry: ```http://localhost:4203/remoteEntry.js```
+
+#### Microservice-Reports-NodeJS
+- Corriendo en: ```http://localhost:3003```
+- Swagger API Docs: ```http://localhost:3003/api/docs```
+- API Reports: ```http://localhost:3003/api/reports```
+
+#### Microfrontend-Reports-Angular
 - Corriendo en: ```http://localhost:4203```
 - RemoteEntry: ```http://localhost:4203/remoteEntry.js```
 
