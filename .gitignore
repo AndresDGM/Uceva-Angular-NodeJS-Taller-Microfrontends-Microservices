@@ -1,0 +1,40 @@
+# Dependencias instaladas
+**/node_modules/
+
+# Salidas de compilación y herramientas Angular
+**/dist/
+**/out-tsc/
+**/.angular/
+**/tmp/
+**/bazel-out/
+**/documentation/
+**/coverage/
+**/.sass-cache/
+
+# Archivos generados por gestores no usados por este repositorio
+**/pnpm-lock.yaml
+
+# Logs y archivos temporales
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# Variables de entorno y secretos locales
+.env
+.env.*
+!.env.example
+
+# Editores
+.idea/
+**/.vscode/*
+!**/.vscode/settings.json
+!**/.vscode/tasks.json
+!**/.vscode/launch.json
+!**/.vscode/extensions.json
+.history/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
