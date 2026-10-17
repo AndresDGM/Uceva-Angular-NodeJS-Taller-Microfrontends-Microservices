@@ -26,3 +26,6 @@ Thumbs.db
 .kilo/
 
 # IMPORTANTE: package-lock.json NO se ignora.
+
+coverage/
+documentation/
