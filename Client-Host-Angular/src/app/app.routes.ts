@@ -51,6 +51,16 @@ export const routes: Routes = [
         }).then(m => m.ProductsPage),
     },
 
+    {
+        path: 'books',
+        loadComponent: () =>
+            loadRemoteModule({
+                type: 'module',
+                remoteEntry: 'http://localhost:4203/remoteEntry.js',
+                exposedModule: './BooksPage',
+        }).then(m => m.BooksPage),
+    },
+
   /**
    * Ruta comodín.
    *
