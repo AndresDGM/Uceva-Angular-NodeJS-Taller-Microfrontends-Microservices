@@ -34,21 +34,63 @@ export const routes: Routes = [
                 exposedModule: './UsersPage',
         }).then(m => m.UsersPage),
     },    
-  /**
+/**
    * Ruta de productos.
    *
    * @remarks
    * Renderiza el componente `ProductsPage`, encargado
    * de mostrar y gestionar el listado de productos.
    */
+     {
+         path: 'products',
+         loadComponent: () =>
+             loadRemoteModule({
+                 type: 'module',
+                 remoteEntry: 'http://localhost:4202/remoteEntry.js',
+                 exposedModule: './ProductsPage',
+         }).then(m => m.ProductsPage),
+     },
+
+  /**
+   * Ruta de loans.
+   *
+   * @remarks
+   * Renderiza el componente `LoansPage`, encargado
+   * de mostrar y gestionar el listado de loans.
+   */
+     {
+         path: 'loans',
+         loadComponent: () =>
+             loadRemoteModule({
+                 type: 'module',
+                 remoteEntry: 'http://localhost:4205/remoteEntry.js',
+                 exposedModule: './LoansPage',
+         }).then(m => m.LoansPage),
+     },
+
     {
-        path: 'products',
+        path: 'books',
         loadComponent: () =>
             loadRemoteModule({
                 type: 'module',
-                remoteEntry: 'http://localhost:4202/remoteEntry.js',
-                exposedModule: './ProductsPage',
-        }).then(m => m.ProductsPage),
+                remoteEntry: 'http://localhost:4203/remoteEntry.js',
+                exposedModule: './BooksPage',
+        }).then(m => m.BooksPage),
+    },
+
+  /**
+   * Ruta de reportes.
+   *
+   * Carga el microfrontend de Reports como remote independiente.
+   */
+    {
+        path: 'reports',
+        loadComponent: () =>
+            loadRemoteModule({
+                type: 'module',
+                remoteEntry: 'http://localhost:4204/remoteEntry.js',
+                exposedModule: './ReportsPage',
+        }).then(m => m.ReportsPage),
     },
 
   /**
