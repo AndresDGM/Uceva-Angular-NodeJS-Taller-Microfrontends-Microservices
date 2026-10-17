@@ -6,7 +6,7 @@ import { CreateReport, Report, ReportsPage } from '../../interfaces/reports.inte
 @Injectable({ providedIn: 'root' })
 export class ReportsService {
   private readonly httpClient = inject(HttpClient);
-  private readonly apiUrl = 'http://localhost:3003/api/reports';
+  private readonly apiUrl = 'http://localhost:3004/api/reports';
 
   createReport(report: CreateReport): Observable<Report> {
     return this.httpClient.post<Report>(this.apiUrl, report);
