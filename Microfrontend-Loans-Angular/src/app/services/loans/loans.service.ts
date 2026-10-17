@@ -43,6 +43,6 @@ export class LoansService {
    * ```
    */
   getAllLoans(countLoans: number): Observable<Loan[]> {
-    return this.httpClient.get<Loan[]>(`http://localhost:3003/api/loans/${countLoans}`);
+    return this.httpClient.get<Loan[]>(`http://localhost:3005/api/loans/${countLoans}`);
   }
 }

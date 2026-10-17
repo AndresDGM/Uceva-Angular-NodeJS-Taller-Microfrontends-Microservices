@@ -55,9 +55,10 @@ export class App {
       icon: 'bootstrap',
       size: 2
     },
-    navLinks: [
-      { text: 'Usuarios', url: '/users' },
-      { text: 'Productos', url: '/products' },
+navLinks: [
+      { text: ' usuarios', url: '/users' },
+      { text: ' productos', url: '/products' },
+      { text: ' Préstamos', url: '/loans' },
     ]
   };
 }

@@ -10,7 +10,7 @@ To start a local development server, run:
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4203/`. The application will automatically reload whenever you modify any of the source files.
+Once the server is running, open your browser and navigate to `http://localhost:4205/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
 
@@ -63,7 +63,7 @@ npm run compodoc
 This microfrontend exposes the `LoansPage` component via Module Federation:
 
 - **Name:** `mf-loans`
-- **Remote Entry:** `http://localhost:4203/remoteEntry.js`
+- **Remote Entry:** `http://localhost:4205/remoteEntry.js`
 - **Exposed module:** `./LoansPage`
 
 The host application loads this remote module using `loadRemoteModule` from `@angular-architects/module-federation`.
@@ -72,8 +72,8 @@ The host application loads this remote module using `loadRemoteModule` from `@an
 
 This microfrontend consumes the Loans microservice running at:
 
-- **Endpoint:** `http://localhost:3003/api/loans/{countLoans}`
-- **Swagger Docs:** `http://localhost:3003/api/docs`
+- **Endpoint:** `http://localhost:3005/api/loans/{countLoans}`
+- **Swagger Docs:** `http://localhost:3005/api/docs`
 
 ## Additional Resources
 

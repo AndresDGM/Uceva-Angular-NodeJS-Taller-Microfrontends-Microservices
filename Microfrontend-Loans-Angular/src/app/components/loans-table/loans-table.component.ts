@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { BadgeAtom, BadgeType } from '@brejcha13320/design-system-bootstrap';
 import { LoanStatus, Loan } from '../../interfaces/loans.interface';
@@ -25,7 +26,7 @@ import { LoanStatus, Loan } from '../../interfaces/loans.interface';
 @Component({
   selector: 'app-loans-table',
   templateUrl: './loans-table.component.html',
-  imports: [BadgeAtom],
+  imports: [CommonModule, BadgeAtom],
 })
 export class LoansTableComponent {
   /**
